@@ -16,10 +16,23 @@ const options = {
 // }
 const getWeather=(city) =>{
     cityName.innerHTML = city
-    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options) //fetch(url, ooptions)
-    .then(response => response.json())
+    fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city, options)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                //throw new Error('City not found or another error occurred.');
+                alert("City not found. Please enter a valid city name.");
+
+            }
+        })
     .then(response => {
-        console.log(response)
+        if (response.error) {
+            // Handle specific error message from the API
+            // For example, update the UI to show that the city wasn't found
+            alert("City not found. Please enter a valid city name.");
+        } else {
+        
         cloud_pct.innerHTML = response.cloud_pct
         temp.innerHTML = response.temp
         feels_like.innerHTML = response.feels_like
@@ -30,8 +43,11 @@ const getWeather=(city) =>{
         wind_degrees.innerHTML = response.wind_degrees
         sunrise.innerHTML = response.sunrise
         sunset.innerHTML = response.sunset
-        })
-    .catch(err => console.error(err));
+        }
+    })
+    .catch(err => {
+        console.error(err);
+    });
 }
 
 submit.addEventListener("click", (e) =>{

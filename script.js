@@ -21,7 +21,6 @@ const getWeather=(city) =>{
             if (response.ok) {
                 return response.json();
             } else {
-                //throw new Error('City not found or another error occurred.');
                 alert("City not found. Please enter a valid city name.");
 
             }

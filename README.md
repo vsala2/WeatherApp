@@ -33,7 +33,7 @@ To use the Weather App:
 + Weather by API-Ninjas from Rapid API for providing the weather data API.
 
 ## License
-This project is licensed under the Vaishnavi Salaskar.
+This project is licensed under the [Vaishnavi Salaskar](https://www.linkedin.com/in/vaishnavi-salaskar/).
 
 
 

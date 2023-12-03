@@ -1,7 +1,7 @@
 # WeatherApp
 
 ## Description 
-The Weather App is a web application that provides real-time weather data for a given city or country. It's built using HTML, CSS, JavaScript, and Bootstrap. 
+The [Weather App](https://weather1996.netlify.app/) is a web application that provides real-time weather data for a given city or country. It's built using HTML, CSS, JavaScript, and Bootstrap. 
 The application utilizes the Weather by API-Ninjas from Rapid API to fetch the latest weather information based on user-provided city or country names. An alert system is integrated to notify users when an incorrect city name is entered.
 
 ## Features
